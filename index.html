@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        header {
+            background-color: rgba(4, 4, 4, 0.77);
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            position: relative;
+            z-index: 1;
+        }
+        .btn {
+            display: inline-block;
+            background: #d92332;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #a71d27;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.28);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-box {
+            background: rgba(0 0 0 / 34%);  /* Lightened background for more comfort */
+            padding: 30px 40px;  /* More padding for spaciousness */
+            border-radius: 8px;  /* Slightly rounder corners for a smoother look */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);  /* Softer and larger shadow for depth */
+            margin: 40px auto;  /* Larger margin to separate sections */
+            max-width: 900px;  /* Slightly wider max width for larger content */
+            display: none;
+            color: white;
+            font-size: 18px;  /* Increased font size for better readability */
+            line-height: 1.6;  /* Better line spacing for text clarity */
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;  /* Smooth transition effects */
+        }
+
+        .section-box h2 {
+           font-size: 28px;  /* Larger heading font size for prominence */
+           margin-bottom: 20px;  /* Added space below the heading */
+           color: #ffffff;  /* Consistent color for headings */
+        }
+
+        .section-box ul {
+           list-style-type: none;  /* Removing default list styling */
+           padding-left: 0;
+        }
+
+        .section-box li {
+           margin-bottom: 15px;  /* Spacing between list items for better readability */
+           font-size: 16px;  /* Adjust font size of list items */
+           padding-left: 25px;  /* Add padding to give some indent */
+           position: relative;
+        }
+
+        .section-box li::before {
+            content: "✔";  /* Add a checkmark before list items */
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #ffffff;  /* Match the checkmark color to the heading */
+            font-size: 18px;
+        }
+
+        h2 {
+            color: #d92332;
+            margin-top: 0;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('services').style.display = 'none';
+            document.getElementById('why-choose').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <header>
+        Welcome to CEL Catering Services
+        <br>
+        <button class="btn" onclick="showSection('services')">Services</button>
+    </header>
+    
+    <div id="services" class="section-box">
+        <h2>Our Services</h2>
+        <ul>
+            <li><strong>Weddings & Engagements</strong>  Elegant and customized dining experiences for your big day.</li>
+            <li><strong>Corporate Events</strong> Professional catering for meetings, conferences, and business gatherings.</li>
+            <li><strong>Private Parties</strong>  Birthdays, anniversaries, and intimate dinners made special.</li>
+            <li><strong>Buffet & Plated Service</strong>  Choose from a variety of serving styles to match your event’s theme.</li>
+            <li><strong>Customized Menus</strong> Personalized meal plans to accommodate dietary preferences and restrictions.</li>
+            <li><strong>Event Planning Assistance</strong>  We help coordinate every detail to create a seamless experience.</li>
+        </ul>
+    </div>
+    
+    
+    
+</body>
+</html>
